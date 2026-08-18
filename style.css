@@ -86,7 +86,7 @@ body {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 label {
@@ -138,10 +138,10 @@ button[type="submit"], .back-btn {
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4);
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
 }
 
 button[type="submit"]:hover {
@@ -171,13 +171,14 @@ button[type="submit"]:hover {
 
 /* --- LOADING SPINNER STYLES --- */
 .spinner {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     border: 3px solid rgba(255, 255, 255, 0.3);
     border-top: 3px solid #ffffff;
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
-    display: inline-block;
+    position: absolute;
+    right: 25px;
 }
 
 @keyframes spin {

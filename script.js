@@ -148,12 +148,10 @@ function validateField(changedElement) {
   const errorBox = document.getElementById("formErrorMsg");
   let firstUnfilledIndex = -1;
 
-  // Check from start to see which required/mandatory field is empty first
   for (let i = 0; i < formFields.length; i++) {
     const fieldId = formFields[i];
     const el = document.getElementById(fieldId);
 
-    // Skip optional fields like bilbila (phone) if desired, but check mandatory ones
     if (el.hasAttribute("required")) {
       const val = el.value.trim();
       if (!val) {
@@ -163,22 +161,18 @@ function validateField(changedElement) {
     }
   }
 
-  // If user tried to fill or touch a field further down while a prior field is empty
   const changedIndex = formFields.indexOf(changedElement.id);
 
   if (firstUnfilledIndex !== -1 && changedIndex > firstUnfilledIndex) {
-    // Prevent skipping: mark the unfilled prior field red and clear the current one
     const unfilledEl = document.getElementById(formFields[firstUnfilledIndex]);
     unfilledEl.classList.add("input-error");
-    changedElement.value = ""; // Reset current skipped field
+    changedElement.value = "";
     changedElement.classList.add("input-error");
 
-    // Show warning message
     errorBox.innerText = translations[currentLang].warningMsg;
     errorBox.classList.remove("hidden");
     unfilledEl.focus();
   } else {
-    // If valid so far, clear error styles
     changedElement.classList.remove("input-error");
     if (firstUnfilledIndex === -1) {
       errorBox.classList.add("hidden");
@@ -294,12 +288,10 @@ document
     e.preventDefault();
 
     const btnSubmit = document.getElementById("btnSubmit");
-    const btnText = document.getElementById("btnText");
     const spinner = document.getElementById("loadingSpinner");
 
     // Show Loading Spinner & Disable Button
     btnSubmit.disabled = true;
-    btnText.classList.add("hidden");
     spinner.classList.remove("hidden");
 
     const formData = {
@@ -335,7 +327,6 @@ document
     } finally {
       // Hide Loading Spinner & Enable Button back
       btnSubmit.disabled = false;
-      btnText.classList.remove("hidden");
       spinner.classList.add("hidden");
     }
   });
