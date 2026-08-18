@@ -27,7 +27,7 @@ const translations = {
     lblBarnoota: "Sadarkaa Barnootaa (Ammayyaa / Diinii) / የትምህርት ደረጃ:",
     btnSubmit: "Galmeessi / መዝግብ",
     formTitle: "Galmee Daataa Haaraa / አዲስ የመረጃ ቆጠራ ቅጽ",
-    btnBack: "← Deebi'i / Back / ተመለስ",
+    btnBack: "← Deebi'i/ተመለስ",
     warningMsg:
       "Maaloo osoo saanduuqoota dursanii jiran hin guutin gara isa itti aanutti hin darbin! Maaloo dura saanduuqa kana guuti.",
   },
