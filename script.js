@@ -9,34 +9,36 @@ const translations = {
     introText:
       "Lakkoofsa muslimoota beekuun diinaaf, hawaasaaf, karoora misoomaaf, gargaarsa waloo fi tokkummaa hawaasaa cimsuuf shoora olaanaa qaba. Ragaa sirrii qabaachuun deeggarsa sirrii kennuuf nu dandeessisa.",
     btn1: "Daataa lakkoofsa muslimtoota kutaa magaalaa malkaa noonnoo haaraa / አዲስ የቆጠራ መረጃ",
-    btn2: "Baay'ina muslimtoota aanaa malkaa gafarsaatti galmaa'anii dhiiraa fi dhalaa / ወረዳ መልካ ግፋርሳ",
-    btn3: "Baay'ina muslimtoota aanaa beerootti galmaa'anii dhiiraa fi dhalaa / ወረዳ ቤሮ",
-    btn4: "Baay'ina muslimtoota aanaa Noonnootti galmaa'anii dhiiraa fi dhalaa / ወረዳ ኖንኖ",
-    btn5: "Baay'ina muslimtoota K/M/M/N walii galaa dhiiraa fi dhalaa / አጠቃላይ በወንድ እና ሴት",
+    btn2: "Baay'ina muslimtoota aanaa malkaa gafarsaatti galmaa'anii dhiiraa fi dhalaa / መልካ ገፋርሳ ወረዳ ",
+    btn3: "Baay'ina muslimtoota aanaa beerootti galmaa'anii dhiiraa fi dhalaa /ቤሮ ወረዳ",
+    btn4: "Baay'ina muslimtoota aanaa Noonnootti galmaa'anii dhiiraa fi dhalaa /ኖኖ ወረዳ",
+    btn5: "Baay'ina muslimtoota K/M/M/N walii galaa dhiiraa fi dhalaa / አጠቃላይ የመልካ ኖኖ ክ/ከተማ የሙስልሞች ብዛት በወንድ እና በሴት",
     btn6: "Ida'ama Baayyina muslimtoota K/M/M/N walii galaa / አጠቃላይ ድምር",
     lblAanaa: "Aanaa Filadhu / ወረዳ ይምረጡ:",
     lblBara: "Bara Galmee (E.C) / የቆጠራ ዓመት:",
     lblMaqaa: "Maqaa Guutuu / ሙሉ ስም:",
     lblSaala: "Saala / ጾታ:",
     lblUmrii: "Umrii / ዕድሜ:",
-    lblBilbila: "Lakkoofsa Bilbilaa / የስልክ ቁጥር:",
+    lblBilbila: "Lakkoofsa Bilbilaa / ስልክ ቁጥር:",
     lblGooxii: "Ganda / Gooxii / ቀበሌ ወይም ጎጥ:",
-    lblMasjida: "Masjida Itti Dhihaatu / የሚቀራረቡት መስጂድ:",
+    lblMasjida: "Masjida Itti Dhihaatu /መስጂድ:",
     lblMaatiiDhiira: "Baay'ina Miseensa Maatii (Dhiira) / የቤተሰብ ብዛት (ወንድ):",
     lblMaatiiDhalaa: "Baay'ina Miseensa Maatii (Dhalaa) / የቤተሰብ ብዛት (ሴት):",
     lblBarnoota: "Sadarkaa Barnootaa (Ammayyaa / Diinii) / የትምህርት ደረጃ:",
     btnSubmit: "Galmeessi / መዝግብ",
     formTitle: "Galmee Daataa Haaraa / አዲስ የመረጃ ቆጠራ ቅጽ",
     btnBack: "← Deebi'i / Back / ተመለስ",
+    warningMsg:
+      "Maaloo osoo saanduuqoota dursanii jiran hin guutin gara isa itti aanutti hin darbin! Maaloo dura saanduuqa kana guuti.",
   },
   am: {
-    mainTitle: "የማልካ ኖንኖ ክፍለ ከተማ ሙስሊሞች ቆጠራ",
+    mainTitle: "የመልካ ኖኖ ክፍለ ከተማ ሙስሊሞች ቆጠራ",
     introText:
       "የሙስሊሞችን ቁጥር ማወቅ ለህብረተሰቡ እድገት፣ ለልማት እቅድ እና ለአብሮነት ትልቅ ሚና አለው። ትክክለኛ መረጃ መኖሩ ተገቢውን ድጋፍ ለማድረግ ያስችላል።",
-    btn1: "አዲስ የማልካ ኖንኖ ክፍለ ከተማ ሙስሊሞች ቆጠራ መረጃ / Daataa Haaraa",
-    btn2: "በማልካ ግፋርሳ ወረዳ የተመዘገቡ ሙስሊሞች ብዛት (ወንድ እና ሴት) / Malkaa Gafarsaa",
+    btn1: "አዲስ የመልካ ኖኖ ክፍለ ከተማ ሙስሊሞች ቆጠራ መረጃ / Daataa Haaraa",
+    btn2: "በመልካ ገፋርሳ ወረዳ የተመዘገቡ ሙስሊሞች ብዛት (ወንድ እና ሴት) / Malkaa Gafarsaa",
     btn3: "በቤሮ ወረዳ የተመዘገቡ ሙስሊሞች ብዛት (ወንድ እና ሴት) / Beeroo",
-    btn4: "በኖንኖ ወረዳ የተመዘገቡ ሙስሊሞች ብዛት (ወንድ እና ሴት) / Noonnoo",
+    btn4: "በኖኖ ወረዳ የተመዘገቡ ሙስሊሞች ብዛት (ወንድ እና ሴት) / Noonnoo",
     btn5: "አጠቃላይ የክ/ከተማው ሙስሊሞች ብዛት በወንድ እና ሴት / Walii Galaa",
     btn6: "አጠቃላይ የክ/ከተማው ሙስሊሞች ድምር ብዛት / Ida'ama Walii Galaa",
     lblAanaa: "ወረዳ ይምረጡ / Aanaa Filadhu:",
@@ -46,13 +48,15 @@ const translations = {
     lblUmrii: "ዕድሜ / Umrii:",
     lblBilbila: "የስልክ ቁጥር / Lakkoofsa Bilbilaa:",
     lblGooxii: "ቀበሌ / ጎጥ / Ganda / Gooxii:",
-    lblMasjida: "የሚቀራረቡት መስጂድ / Masjida Itti Dhihaatu:",
+    lblMasjida: "መስጂድ / Masjida Itti Dhihaatu:",
     lblMaatiiDhiira: "የቤተሰብ ብዛት (ወንድ) / Maatii (Dhiira):",
     lblMaatiiDhalaa: "የቤተሰብ ብዛት (ሴት) / Maatii (Dhalaa):",
     lblBarnoota: "የትምህርት ደረጃ (ዘመናዊ / ዲን) / Sadarkaa Barnootaa:",
     btnSubmit: "መዝግብ / Galmeessi",
     formTitle: "አዲስ የመረጃ ቆጠራ ቅጽ / Galmee Daataa",
     btnBack: "ተመለስ / Deebi'i",
+    warningMsg:
+      "እባክዎ ቀድመው ያሉትን ሳጥኖች ሳይሞሉ ወደሚቀጥለው አይሂዱ! እባክዎ መጀመሪያ ይህንን ሳጥን ይሙሉ አብረው ያስገቡ።",
   },
   en: {
     mainTitle: "Malkaa Noonnoo Sub-City Muslim Population Census",
@@ -78,10 +82,15 @@ const translations = {
     btnSubmit: "Register",
     formTitle: "New Census Registration Form",
     btnBack: "← Back / Deebi'i",
+    warningMsg:
+      "Please do not skip previous fields! Please fill out the preceding required fields first.",
   },
 };
 
+let currentLang = "om";
+
 function changeLanguage(lang) {
+  currentLang = lang;
   document.getElementById("mainTitle").innerText = translations[lang].mainTitle;
   document.getElementById("introText").innerText = translations[lang].introText;
   document.getElementById("btn1").innerText = translations[lang].btn1;
@@ -106,7 +115,7 @@ function changeLanguage(lang) {
     translations[lang].lblMaatiiDhalaa;
   document.getElementById("lblBarnoota").innerText =
     translations[lang].lblBarnoota;
-  document.getElementById("btnSubmit").innerText = translations[lang].btnSubmit;
+  document.getElementById("btnText").innerText = translations[lang].btnSubmit;
   document.getElementById("formTitle").innerText = translations[lang].formTitle;
   document.getElementById("btnBack").innerText = translations[lang].btnBack;
   document.getElementById("btnBackReport").innerText =
@@ -118,9 +127,79 @@ function openRegistration() {
   document.getElementById("menuButtons").classList.add("hidden");
   document.getElementById("registrationForm").classList.remove("hidden");
   document.getElementById("reportSection").classList.add("hidden");
+  clearFormValidation();
 }
 
-// --- 2. SHOW REPORT FUNCTION (Updated Labels to Ida'ama Dhiiraa / Dhalaa) ---
+// --- SEQUENTIAL FIELD VALIDATION LOGIC ---
+const formFields = [
+  "aanaa",
+  "bara",
+  "maqaa",
+  "saala",
+  "umrii",
+  "gooxii",
+  "masjida",
+  "maatiiDhiira",
+  "maatiiDhalaa",
+  "barnoota",
+];
+
+function validateField(changedElement) {
+  const errorBox = document.getElementById("formErrorMsg");
+  let firstUnfilledIndex = -1;
+
+  // Check from start to see which required/mandatory field is empty first
+  for (let i = 0; i < formFields.length; i++) {
+    const fieldId = formFields[i];
+    const el = document.getElementById(fieldId);
+
+    // Skip optional fields like bilbila (phone) if desired, but check mandatory ones
+    if (el.hasAttribute("required")) {
+      const val = el.value.trim();
+      if (!val) {
+        firstUnfilledIndex = i;
+        break;
+      }
+    }
+  }
+
+  // If user tried to fill or touch a field further down while a prior field is empty
+  const changedIndex = formFields.indexOf(changedElement.id);
+
+  if (firstUnfilledIndex !== -1 && changedIndex > firstUnfilledIndex) {
+    // Prevent skipping: mark the unfilled prior field red and clear the current one
+    const unfilledEl = document.getElementById(formFields[firstUnfilledIndex]);
+    unfilledEl.classList.add("input-error");
+    changedElement.value = ""; // Reset current skipped field
+    changedElement.classList.add("input-error");
+
+    // Show warning message
+    errorBox.innerText = translations[currentLang].warningMsg;
+    errorBox.classList.remove("hidden");
+    unfilledEl.focus();
+  } else {
+    // If valid so far, clear error styles
+    changedElement.classList.remove("input-error");
+    if (firstUnfilledIndex === -1) {
+      errorBox.classList.add("hidden");
+      errorBox.innerText = "";
+    }
+  }
+}
+
+function clearFormValidation() {
+  formFields.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) el.classList.remove("input-error");
+  });
+  const errorBox = document.getElementById("formErrorMsg");
+  if (errorBox) {
+    errorBox.classList.add("hidden");
+    errorBox.innerText = "";
+  }
+}
+
+// --- SHOW REPORT FUNCTION ---
 async function showReport(type) {
   document.getElementById("introSection").classList.add("hidden");
   document.getElementById("menuButtons").classList.add("hidden");
@@ -205,13 +284,23 @@ function goBackToMenu() {
   document.getElementById("menuButtons").classList.remove("hidden");
   document.getElementById("registrationForm").classList.add("hidden");
   document.getElementById("reportSection").classList.add("hidden");
+  clearFormValidation();
 }
 
-// --- 3. SUPABASE DATA INSERTION ON FORM SUBMIT ---
+// --- SUPABASE DATA INSERTION WITH LOADING SPINNER ---
 document
   .getElementById("registrationForm")
   .addEventListener("submit", async function (e) {
     e.preventDefault();
+
+    const btnSubmit = document.getElementById("btnSubmit");
+    const btnText = document.getElementById("btnText");
+    const spinner = document.getElementById("loadingSpinner");
+
+    // Show Loading Spinner & Disable Button
+    btnSubmit.disabled = true;
+    btnText.classList.add("hidden");
+    spinner.classList.remove("hidden");
 
     const formData = {
       aanaa: document.getElementById("aanaa").value,
@@ -243,5 +332,10 @@ document
     } catch (err) {
       console.error("Network Error:", err);
       alert("Rakkoo internetiitiin deetaan hin ergamne!");
+    } finally {
+      // Hide Loading Spinner & Enable Button back
+      btnSubmit.disabled = false;
+      btnText.classList.remove("hidden");
+      spinner.classList.add("hidden");
     }
   });

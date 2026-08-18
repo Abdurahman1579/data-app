@@ -30,7 +30,7 @@
         </p>
       </div>
 
-      <!-- Buttoonni 6 (Bitaa fi Mirgatti kan qindaa'an - Grid Layout) -->
+      <!-- Buttoonni 6 -->
       <div id="menuButtons" class="menu-grid">
         <button class="menu-btn" onclick="openRegistration()" id="btn1">
           Daataa lakkoofsa muslimtoota kutaa magaalaa malkaa noonnoo haaraa
@@ -57,7 +57,7 @@
         </button>
       </div>
 
-      <!-- Formii Galmee (Jalqaba Cufaa Dha) -->
+      <!-- Formii Galmee -->
       <form id="registrationForm" class="hidden">
         <button
           type="button"
@@ -69,9 +69,12 @@
         </button>
         <h3 id="formTitle">Galmee Daataa Haaraa</h3>
 
+        <!-- Error Warning Message Area -->
+        <div id="formErrorMsg" class="error-msg hidden"></div>
+
         <!-- 1. Aanaa Filachuu -->
         <label id="lblAanaa" for="aanaa">Aanaa Filadhu:</label>
-        <select id="aanaa" name="aanaa" required>
+        <select id="aanaa" name="aanaa" required onchange="validateField(this)">
           <option value="">-- Aanaa Filadhu / ወረዳ ይምረጡ --</option>
           <option value="malkaa_gafarsaa">
             Aanaa Malkaa Gafarsaa / ወረዳ መልካ ግፋርሳ
@@ -82,7 +85,7 @@
 
         <!-- 2. Bara Galmee (E.C) -->
         <label id="lblBara" for="bara">Bara Galmee (E.C):</label>
-        <select id="bara" name="bara" required>
+        <select id="bara" name="bara" required onchange="validateField(this)">
           <option value="">-- Bara Filadhu / ዓመት ይምረጡ --</option>
           <option value="2018">2018</option>
           <option value="2019">2019</option>
@@ -97,11 +100,12 @@
           name="maqaa"
           placeholder="Maqaa fi Maqaa Abbaa / ስም እና የአባት ስም"
           required
+          oninput="validateField(this)"
         />
 
         <!-- Saala -->
         <label id="lblSaala" for="saala">Saala:</label>
-        <select id="saala" name="saala" required>
+        <select id="saala" name="saala" required onchange="validateField(this)">
           <option value="">-- Saala Filadhu / ጾታ ይምረጡ --</option>
           <option value="dhiira">Dhiira / ወንድ / Male</option>
           <option value="dhalaa">Dhalaa / ሴት / Female</option>
@@ -115,6 +119,7 @@
           name="umrii"
           placeholder="Bara dhalootaa ykn umrii / ዕድሜ"
           required
+          oninput="validateField(this)"
         />
 
         <!-- Lakkoofsa Bilbilaa -->
@@ -124,6 +129,7 @@
           id="bilbila"
           name="bilbila"
           placeholder="09xxxxxxxx"
+          oninput="validateField(this)"
         />
 
         <!-- Ganda / Gooxii -->
@@ -134,6 +140,7 @@
           name="gooxii"
           placeholder="Maqaa Gandaa ykn Gooxii / ቀበሌ ወይም ጎጥ"
           required
+          oninput="validateField(this)"
         />
 
         <!-- Masjida Itti Dhihaatu -->
@@ -146,13 +153,19 @@
           name="masjida"
           placeholder="Maqaa Masjidaa / የመስጂዱ ስም"
           required
+          oninput="validateField(this)"
         />
 
-        <!-- Baay'ina Miseensa Maatii: Dhiiraa fi Dhalaa Addatti (Dropdown) -->
+        <!-- Baay'ina Miseensa Maatii: Dhiiraa fi Dhalaa -->
         <label id="lblMaatiiDhiira" for="maatiiDhiira"
           >Baay'ina Miseensa Maatii (Dhiira):</label
         >
-        <select id="maatiiDhiira" name="maatiiDhiira" required>
+        <select
+          id="maatiiDhiira"
+          name="maatiiDhiira"
+          required
+          onchange="validateField(this)"
+        >
           <option value="0">0</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -165,7 +178,12 @@
         <label id="lblMaatiiDhalaa" for="maatiiDhalaa"
           >Baay'ina Miseensa Maatii (Dhalaa):</label
         >
-        <select id="maatiiDhalaa" name="maatiiDhalaa" required>
+        <select
+          id="maatiiDhalaa"
+          name="maatiiDhalaa"
+          required
+          onchange="validateField(this)"
+        >
           <option value="0">0</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -179,7 +197,12 @@
         <label id="lblBarnoota" for="barnoota"
           >Sadarkaa Barnootaa (Ammayyaa / Diinii):</label
         >
-        <select id="barnoota" name="barnoota" required>
+        <select
+          id="barnoota"
+          name="barnoota"
+          required
+          onchange="validateField(this)"
+        >
           <option value="">
             -- Sadarkaa Barnootaa Filadhu / የትምህርት ደረጃ --
           </option>
@@ -205,10 +228,14 @@
           </option>
         </select>
 
-        <button type="submit" id="btnSubmit">Galmeessi</button>
+        <!-- Submit Button with Spinner Container -->
+        <button type="submit" id="btnSubmit">
+          <span id="btnText">Galmeessi</span>
+          <span id="loadingSpinner" class="spinner hidden"></span>
+        </button>
       </form>
 
-      <!-- Iddoo Gabaasaa (Report Display Area) -->
+      <!-- Iddoo Gabaasaa -->
       <div id="reportSection" class="hidden">
         <button
           type="button"
