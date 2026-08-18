@@ -42,7 +42,7 @@ const translations = {
     btn5: "አጠቃላይ የክ/ከተማው ሙስሊሞች ብዛት በወንድ እና ሴት / Walii Galaa",
     btn6: "አጠቃላይ የክ/ከተማው ሙስሊሞች ድምር ብዛት / Ida'ama Walii Galaa",
     lblAanaa: "ወረዳ ይምረጡ / Aanaa Filadhu:",
-    lblBara: "የቆጠራ ዓመተ ምህረት (ኢ.ዘ) / Bara Galmee:",
+    lblBara: "የቆጠራ ዓመተ/Bara Galmee:",
     lblMaqaa: "ሙሉ ስም / Maqaa Guutuu:",
     lblSaala: "ጾታ / Saala:",
     lblUmrii: "ዕድሜ / Umrii:",
