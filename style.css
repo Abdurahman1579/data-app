@@ -18,27 +18,59 @@ body {
     max-width: 800px;
 }
 
-.lang-switch {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
+/* --- LANG DROPDOWN STYLES --- */
+.lang-dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
     margin-bottom: 20px;
 }
 
-.lang-switch button {
-    padding: 6px 12px;
+.lang-btn {
     background: linear-gradient(to bottom, #4158D0, #C850C0);
     color: white;
     border: none;
+    padding: 8px 16px;
+    font-weight: bold;
     border-radius: 20px;
     cursor: pointer;
-    font-weight: bold;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lang-menu {
+    position: absolute;
+    right: 0;
+    top: 110%;
+    background: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.lang-menu a {
+    color: #0d1b2a;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.lang-menu a:hover {
+    background-color: #f1f1f1;
+    color: #4158D0;
 }
 
 .intro-box {
     text-align: center;
     margin-bottom: 25px;
+    clear: both; /* Float akka hin balleessine */
 }
 
 .intro-box h2 {

@@ -10,11 +10,18 @@
   </head>
   <body>
     <div class="container">
-      <!-- Jijjiirraa Afaanii (Oromo / Amharic / English) -->
-      <div class="lang-switch">
-        <button onclick="changeLanguage('om')">Afaan Oromoo</button>
-        <button onclick="changeLanguage('am')">አማርኛ</button>
-        <button onclick="changeLanguage('en')">English</button>
+      <!-- Jijjiirraa Afaanii (Dropdown Menu Style) -->
+      <div class="lang-dropdown">
+        <button class="lang-btn" onclick="toggleLangMenu()">
+          <span id="currentLangText">Afaan Oromoo</span> ▾
+        </button>
+        <div id="langMenu" class="lang-menu hidden">
+          <a href="#" onclick="selectLanguage('om', 'Afaan Oromoo')"
+            >Afaan Oromoo</a
+          >
+          <a href="#" onclick="selectLanguage('am', 'አማርኛ')">አማርኛ</a>
+          <a href="#" onclick="selectLanguage('en', 'English')">English</a>
+        </div>
       </div>
 
       <!-- Barreeffama Barbaachisummaa Lakkoofsa Muslimaa -->
@@ -77,10 +84,10 @@
         <select id="aanaa" name="aanaa" required onchange="validateField(this)">
           <option value="">-- Aanaa Filadhu / ወረዳ ይምረጡ --</option>
           <option value="malkaa_gafarsaa">
-            Aanaa Malkaa Gafarsaa / ወረዳ መልካ ግፋርሳ
+            Aanaa Malkaa Gafarsaa /መልካ ገፋርሳ ወረዳ
           </option>
-          <option value="beeroo">Aanaa Beeroo / ወረዳ ቤሮ</option>
-          <option value="noonnoo">Aanaa Noonnoo / ወረዳ ኖንኖ</option>
+          <option value="beeroo">Aanaa Beeroo /ቤሮ ወረዳ</option>
+          <option value="noonnoo">Aanaa Noonnoo /ኖኖ ወረዳ</option>
         </select>
 
         <!-- 2. Bara Galmee (E.C) -->

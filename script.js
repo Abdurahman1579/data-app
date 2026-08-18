@@ -89,6 +89,32 @@ const translations = {
 
 let currentLang = "om";
 
+// --- LANGUAGE SWITCH DROPDOWN FUNCTIONS ---
+function toggleLangMenu() {
+  const menu = document.getElementById("langMenu");
+  menu.classList.toggle("hidden");
+}
+
+function selectLanguage(langCode, langDisplayName) {
+  currentLang = langCode;
+  document.getElementById("currentLangText").innerText = langDisplayName;
+  document.getElementById("langMenu").classList.add("hidden");
+  changeLanguage(langCode);
+}
+
+// Yoo iddoo biraa cuqaasan menuun akka cufamu
+window.onclick = function (event) {
+  if (
+    !event.target.matches(".lang-btn") &&
+    !event.target.matches(".lang-btn *")
+  ) {
+    const menu = document.getElementById("langMenu");
+    if (menu && !menu.classList.contains("hidden")) {
+      menu.classList.add("hidden");
+    }
+  }
+};
+
 function changeLanguage(lang) {
   currentLang = lang;
   document.getElementById("mainTitle").innerText = translations[lang].mainTitle;
@@ -153,7 +179,7 @@ function validateField(changedElement) {
     const el = document.getElementById(fieldId);
 
     if (el.hasAttribute("required")) {
-      const val = el.value.trim();
+      const val = el.value ? el.value.trim() : "";
       if (!val) {
         firstUnfilledIndex = i;
         break;
@@ -166,7 +192,12 @@ function validateField(changedElement) {
   if (firstUnfilledIndex !== -1 && changedIndex > firstUnfilledIndex) {
     const unfilledEl = document.getElementById(formFields[firstUnfilledIndex]);
     unfilledEl.classList.add("input-error");
-    changedElement.value = "";
+
+    if (changedElement.tagName === "SELECT") {
+      changedElement.value = "";
+    } else {
+      changedElement.value = "";
+    }
     changedElement.classList.add("input-error");
 
     errorBox.innerText = translations[currentLang].warningMsg;
@@ -246,7 +277,7 @@ async function showReport(type) {
                 <p>Ida'ama Dhalaa (አጠቃላይ የሴት ድምር): <b>${totalDhalaa}</b></p>
             `;
     } else if (type === "iada_ama") {
-      titleText = "Ida'ama Walii Galaa / አጠቃላይ ድምር K/M/M/N";
+      titleText = "Ida'ama Walii Galaa / አጠቃላይ ድር K/M/M/N";
 
       const { data, error } = await _supabase
         .from("muslim_census")
@@ -281,6 +312,24 @@ function goBackToMenu() {
   clearFormValidation();
 }
 
+// --- AUTOMATIC EVENT ATTACHMENT FOR STRICT SEQUENTIAL VALIDATION ---
+document.addEventListener("DOMContentLoaded", function () {
+  formFields.forEach((fieldId) => {
+    const el = document.getElementById(fieldId);
+    if (el) {
+      el.addEventListener("focus", function () {
+        validateField(this);
+      });
+      el.addEventListener("change", function () {
+        validateField(this);
+      });
+      el.addEventListener("input", function () {
+        validateField(this);
+      });
+    }
+  });
+});
+
 // --- SUPABASE DATA INSERTION WITH LOADING SPINNER ---
 document
   .getElementById("registrationForm")
@@ -290,7 +339,6 @@ document
     const btnSubmit = document.getElementById("btnSubmit");
     const spinner = document.getElementById("loadingSpinner");
 
-    // Show Loading Spinner & Disable Button
     btnSubmit.disabled = true;
     spinner.classList.remove("hidden");
 
@@ -323,9 +371,8 @@ document
       }
     } catch (err) {
       console.error("Network Error:", err);
-      alert("Rakkoo internetiitiin deetaan hin ergamne!");
+      alert("Rakkoo internetiitiin daataan hin ergamne!");
     } finally {
-      // Hide Loading Spinner & Enable Button back
       btnSubmit.disabled = false;
       spinner.classList.add("hidden");
     }
